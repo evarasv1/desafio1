@@ -84,6 +84,7 @@ header{
    
     padding: 10px;
     text-align: center;
+    margin-top: 50px;
   }
   
   #boxes .col1{
@@ -103,15 +104,15 @@ header{
 }
 #boxes .text3{
     
-    margin-top: 5%;
     margin-left: 4%;
     margin-right: 4%;
+
    
 }
 
 #boxes .text4{
     text-align:justify;
-    margin-top: 5%;
+    margin-top: 10px;
     margin-left: 4%;
     margin-right: 4%;
 }
@@ -119,7 +120,7 @@ header{
 
 
 #boxes .col2{
-background-image: url("images/1.jpg");
+background-image: url("images/1.png");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
