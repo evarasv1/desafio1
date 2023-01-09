@@ -128,20 +128,154 @@ min-height: 300px;
 border-radius: 10px;
 }
 
-#li1{
-    margin-top: 10px;
-}
 
-#li1 .line{
 
- 
-  border-top: 1px solid black;
+.linea {
+  border-top: 2px solid black;
   height: 2px;
+  max-width: 90%;
   padding: 0;
-  margin: 20px 90px 20px 90px;
-
-
+  margin: 50px auto 0 auto;
 }
+
+
+
+#contenedor3 {
+  /** Indico que esta caja padre va a funcionar con las caracteristicas de flexbox (para manipular los primeros hijos) */
+  display: flex;
+
+  /** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
+  flex-direction: column;
+
+  /** Establezco que, cuando ya no entren mas cajas en la primer fila, se vayan colocando en la fila siguiente (es decir, en una nueva fila) y asi no se salen del contenedor padre
+  /** (probar tambien el valor "nowrap" en vez de "wrap" */
+  flex-wrap: wrap;
+
+  /** Distribucion de elementos en el eje X (probar tambien con "center", "space-around", "space-between" */
+  justify-content: space-evenly;
+
+  /** Coloco un ancho y dejo centrada esta caja padre */
+  width: 80%;
+  margin: 0 auto;
+
+  /** Coloco un margin-top, un padding y un borde a esta caja padre */
+  margin-top: 50px;
+  padding: 10px;
+ 
+}
+
+
+#contenedor4 {
+  /** Indico que esta caja padre va a funcionar con las caracteristicas de flexbox (para manipular los primeros hijos) */
+  display: flex;
+
+  /** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
+  flex-direction: row;
+  flex-flow: wrap;
+
+
+  /** Distribucion de elementos en el eje X (probar tambien con "center", "space-around", "space-between" */
+  justify-content: space-around;
+
+  /** Coloco un ancho y dejo centrada esta caja padre */
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
+
+  /** Coloco un margin-top, un padding y un borde a esta caja padre */
+  margin-top: 20px;
+ 
+ 
+}
+
+#contenedor4 .secciones {
+  background-color: rgb(33, 111, 177);
+  color: #fff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-style: normal;
+  text-align: center;
+  width: 25%;
+  height: 200px;
+}
+#contenedor4 .h11, .h22{
+
+  margin-top: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#contenedor4 .btn1{
+  border: 1px solid #343434;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  width: 90px;
+  height: 20px;
+  background-color: #fff;
+  size: 15%;
+
+  border-radius: 5px;
+}
+
+
+#contenedor5 {
+  /** Indico que esta caja padre va a funcionar con las caracteristicas de flexbox (para manipular los primeros hijos) */
+  display: flex;
+
+  /** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
+  flex-direction: column;
+  flex-flow: wrap;
+
+
+  /** Distribucion de elementos en el eje X (probar tambien con "center", "space-around", "space-between" */
+  justify-content: space-evenly;
+
+  /** Coloco un ancho y dejo centrada esta caja padre */
+  width: 100%;
+  margin: 0 auto;
+  height: 100px;
+  background-color: rgb(44, 153, 163);
+
+  /** Coloco un margin-top, un padding y un borde a esta caja padre */
+  margin-top: 20px;
+ 
+ 
+}
+
+#bloqueenblanco{
+
+  background-color: #fff;
+  width: 100%;
+  height: 30px;
+}
+
+
+
+#contenedor6 {
+  /** Indico que esta caja padre va a funcionar con las caracteristicas de flexbox (para manipular los primeros hijos) */
+  display: flex;
+
+  /** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
+  flex-direction: row;
+
+  /** Establezco que, cuando ya no entren mas cajas en la primer fila, se vayan colocando en la fila siguiente (es decir, en una nueva fila) y asi no se salen del contenedor padre
+  /** (probar tambien el valor "nowrap" en vez de "wrap" */
+  flex-wrap: wrap;
+
+  /** Distribucion de elementos en el eje X (probar tambien con "center", "space-around", "space-between" */
+  justify-content: space-evenly;
+
+  /** Coloco un ancho y dejo centrada esta caja padre */
+  width: 100%;
+  margin: 0 auto;
+
+  /** Coloco un margin-top, un padding y un borde a esta caja padre */
+  margin-top: 50px;
+  padding: 10px;
+  border: 3px solid purple;
+  height: 100px;
+}
+
 
 /*RESPONSIVE*/
 
@@ -157,4 +291,31 @@ border-radius: 10px;
         width: 80%;
         margin: 0 auto;
       }
+      .linea{
+        width: auto;
+        margin: auto;
+      }
+
+      #contenedor4 {
+        flex-direction: column;
+        height: 500px;
+      }
+    
+      #contenedor4 .seccion {
+        flex-basis: 10%;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 500px) {
+        #contenedor4 .seccion {
+          flex-basis: 25%;
+          width: 60%;
+          margin: 0 auto;
+        }
+      }
+      
+
+
+
 }
