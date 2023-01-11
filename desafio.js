@@ -507,12 +507,109 @@ function calcularCuadrados(arreglo = []) {
  *? dentro de los sectores de E-Contact. Caso contrario, retornar False
  */
 
- function verificarSector(econtact = {}, sector) {}
+ function verificarSector(econtact = {}, sector) {
+
+    let k=0;
+    let i=0;
+
+    for (i of econtact.datos.sectores) {
+
+      if (i == sector ){
+
+        k=1;
+      }
+
+    }
+
+    return k==1;
+ }
+
+//const funci14 = verificarSector(objetoFijo,"otro");
+//console.log(funci14);
+
+
+/**
+ *? EJERCICIO 18: Crear una función que reciba 2 (dos) parámetros: el "objetoFijo" definido al inicio y un número (cantidad de empleados).
+ *? La función debe retornar la cantidad de sedes que tengan una cantidad de empleados menor a la cantidad establecida como segundo parámetro.
+ */
+
+ function verificarCantidadEmpleados(econtact = {}, cantidad) {
+
+   let array =[] ;
+ 
+  for (const [key,value] of Object.entries( econtact.datos.sedes)) {
+ 
+     if(value.empleados < cantidad)
+     {
+       array.push(key);
+     }
+   
+  }
+
+  return ` La cantidad de sedes que tienen un número de empleados menor a ${cantidad} es ${array.length} y son ${array}`;
+ 
+ }
+
+// const funci15 = verificarCantidadEmpleados(objetoFijo,30);
+//console.log(funci15);
+
+
+/**
+ *? EJERCICIO 19: Crear una función que reciba 2 (dos) parámetros: un objeto y un string (clave a verificar). Si el objeto cuenta con la clave que se solicita
+ *? como segundo parámetro, retornar True. Caso contrario retornar False.
+ *? Ejemplo: El siguiente objeto cuenta con las claves nombre, edad y profesion. PERO no cuenta con la clave "altura" por ejemplo.
+ *? const alumno = { nombre: 'Juan', edad: 35, profesion: 'programador' }
+ *?
+ */
+
+ function verificarClave(objeto = {}, clave) {
+
+    let k=0;
+    for (const [key,value] of Object.entries( objeto)) {
+  
+      if(key==clave){
+        k=1;
+  
+      }
+  
+  
+    }
+     return k==1;
+
+
+  }
+
+ //const objeto = { nombre: 'Juan', edad: 35, profesion: 'programador' };
+ //const funci16 = verificarClave(objeto,"altura");
+ //console.log(funci16);
+
+ /**
+ *? EJERCICIO 20: Crear una función que reciba un arreglo de numeros reales y retornar un nuevo arreglo con los mismos numeros pero quitando su parte decimal.
+ *? Recordatorio: al inicio hay un arreglo de numeros reales como ejemplo.
+ */
+
+function quitarParteDecimal(arregloNumerosReales = []) {
+  let i =0;
+  let array1 =[];
+  for (i in arregloNumerosReales) {
+  
+    array1[i]=(~~arregloNumerosReales[i]);
+  
+  }
+
+  return `El arreglo de números reales trunco es: ${array1}` ;
+
+
+}
+
+//const funci17 = quitarParteDecimal(numerosReales);
+//console.log(funci17);
 
 
 
 
-
+ 
+ 
  
    
  
