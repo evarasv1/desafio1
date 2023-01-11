@@ -297,3 +297,115 @@ function obtenerPaisesConTelefono(econtact = {}) {
  */
 
 function cargarArreglo(numero) {}
+
+
+
+/**
+ *? EJERCICIO 10: Crear una función que reciba un arreglo de números como parámetro y calcule cuántos de esos números son divisibles por 5.
+ *? La función debe retornar la cantidad de números divisibles por 5.
+ *?  Ayuda: Usar el operador módulo (o resto) "%"
+ */
+
+ function divisiblesPorCinco(numeros = []) {
+
+      let i= 0;
+      let k= 0;
+
+      for (i  in numeros ){
+
+        if (numeros[i]%5 ==0  && numeros[i] !==0) 
+        {
+          ++k;
+          
+        }
+       }
+
+       return ` La cantidad de numeros divisible por 5 es : ${k}` ;
+
+
+
+ }
+
+ //const funci7 = divisiblesPorCinco([0,0,0,15,20]);
+ //console.log(funci7);
+
+ /**
+ *? EJERCICIO 11: Crear una función que reciba un arreglo de números y realice la sumatoria de los mismos.
+ *? La función debe retornar la sumatoria de esos números.
+ *?
+ */
+
+function sumatoria(numeros = []) {
+
+  let i =0;
+  let k =0;
+
+  for (i in numeros) {
+
+    k = k + numeros[i];
+
+  }
+
+  return k;
+}
+
+//const funci8 = sumatoria(arregloFijo);
+//console.log(funci8);
+
+/**
+ *? EJERCICIO 12: Crear una función que reciba el "objetoFijo" definido al inicio y verificar si la cantidad total de empleados de E-Contact indicada (100) es igual
+ *? a la sumatoria de los empleados de las sedes.
+ *? La función debe retornar True si son iguales, o False en caso de no ser iguales
+ */
+
+ function verificarCantidadEmpleados(econtact = {}) {
+
+  let k=0;
+  for (const [key,value] of  Object.entries(econtact.datos.sedes)) {
+
+    k = k + value.empleados;
+  }
+
+  return k == econtact.datos.empleados;
+
+ }
+
+ //const funci9 = verificarCantidadEmpleados(objetoFijo);
+ //console.log(funci9);
+
+ /**
+ *? EJERCICIO 13: Crear una función que retorne un nuevo arreglo con el cuadrado de cada número del "arregloFijo" definido al inicio
+ *? Ayuda: para calcular el cuadrado de un número podemos usar la expresión "**" o la clase "Math" con su método "pow". Ver ejemplos a continuación:
+ *? Ejemplo de 3 al cuadrado:
+ *? console.log(3 ** 2)
+ *? Ejemplo de 5 al cuadrado:
+ *? console.log(Math.pow(5, 2))
+ */
+
+function calcularCuadrados(arreglo = []) {
+
+  let i=0;
+
+  let array2 = [];
+
+  for (i in arreglo) {
+  
+    array2.push(arreglo[i]**2);
+  
+    
+  }
+
+  return array2;
+
+}
+
+const funci10 = calcularCuadrados([0,20,3,4,5]);
+
+console.log(funci10);
+
+
+
+
+
+  
+
