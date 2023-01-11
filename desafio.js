@@ -399,9 +399,125 @@ function calcularCuadrados(arreglo = []) {
 
 }
 
-const funci10 = calcularCuadrados([0,20,3,4,5]);
+//const funci10 = calcularCuadrados([0,20,3,4,5]);
 
-console.log(funci10);
+//console.log(funci10);
+
+
+/**
+ *? EJERCICIO 14: Crear una función que reciba como parámetro un arreglo de 6 (seis) números como mínimo y realizar la sumatoria de los mismos.
+ *? Si la sumatoria supera un valor de 100 retornar True.
+ *? Caso contrario retornar False.
+ *? Validar al inicio de la función que el arreglo cuente con la condición establecida. Si no cumple la misma, retornar False
+ */
+
+ function validarArreglo(numeros = []) {
+
+  let i=0;
+  let k=0;
+  
+    if ( numeros.length >= 6) {
+ 
+       for (i in numeros) {
+         k = k + numeros[i];
+ 
+       }
+ 
+       return k > 100;
+ 
+     
+    }else{
+       return ` El arreglo no tiene  el mínimo de 6 elementos ` ;
+    }
+
+
+ }
+
+ //const funci11 = validarArreglo([0,10,50,0,0,1]);
+ //console.log(funci11);
+
+/**
+ *? EJERCICIO 15: Crear una función que reciba dos parámetros: un arreglo de strings con diferentes nombres, y un segundo parámetro con un nombre (string) cualquiera.
+ *? La función debe retornar True si en ese arreglo se encuentra el nombre pasado como segundo parámetro. Caso contrario retornar False.
+ *? Recordar que Javascript es "Case Sensitive", es decir, distingue entre mayúsculas y minúsculas.
+ */
+
+ function validarNombre(nombres = [], nombre) {
+
+  let k=0;
+
+  let i=0;
+
+  for (i in  nombres) {
+ 
+       if (nombres[i]==nombre) {
+         
+         k=1;
+       }
+  }
+ 
+  if(k==1){
+ 
+   return true;
+  }else {
+ 
+   return false;
+ 
+  }
+
+
+ }
+
+// const funci12 = validarNombre(   ["hola", "tu","yo","estos","ya","mmm"],"que");
+// console.log(funci12);
+
+/**
+ *? EJERCICIO 16: Crear una función que reciba 2 (dos) parámetros: un arreglo de números y número. La función debe retornar la posición de ese valor en el arreglo
+ */
+
+ function devolverPosicion(numeros = [], numero) {
+
+  let i=0;
+  let k=0;
+  let array2 =[]
+  for (i in numeros) {
+  
+    if(numeros[i]== numero){
+  
+        array2.push(i);
+    }
+    
+  
+  }
+
+  if(array2.length==0){
+    array2.push("null");
+  }
+  return ` La posición(es) en el arreglo del número ingresado : ${array2}` ;
+
+
+ }
+
+//const funci13 = devolverPosicion([3,3,3,3,5,6,7],3);
+//console.log(funci13);
+
+
+/**
+ *? EJERCICIO 17: Crear una función que reciba 2 (dos) parámetros: el "objetoFijo" definido al inicio y un string. Retornar True si el segundo parámetro se encuentra
+ *? dentro de los sectores de E-Contact. Caso contrario, retornar False
+ */
+
+ function verificarSector(econtact = {}, sector) {}
+
+
+
+
+
+ 
+   
+ 
+
+
 
 
 
