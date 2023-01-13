@@ -29,6 +29,7 @@ header{
     display: flex;
     background-color: rgb(44, 153, 163);
     flex-direction: column;
+    height: 200px;
 
 
 }
@@ -42,23 +43,22 @@ header{
 }
 
 #container1 .section1 {
+  margin-top: 2%;
     
     text-align: center;
     min-height: 30%;
+    color: #fff;
+    font-family:Georgia, 'Times New Roman', Times, serif
+
     
   }
-  .titulo2{
-    
-    text-transform: uppercase;
-    color: #fff;;
-    text-align: center;
-  }
-  
+
 
 #container1 .section2 {
+    margin-top: 1%;
     text-align: center;
     font-size: large;
-    min-height: 70%;
+
   }
 
 .subti1{
@@ -79,9 +79,6 @@ header{
 
 #boxes .sec{
     flex-basis: 50%;
-
-    /** Coloco un borde, padding y centro el texto de cada caja */
-   
     padding: 10px;
     text-align: center;
     margin-top: 50px;
@@ -93,7 +90,7 @@ header{
 
 
   #boxes .row1{
-    font-size: medium;
+    font-size: small;
     color: #fff;
     background-color: rgb(57, 57, 59);
     border-radius: 20px;
@@ -101,6 +98,9 @@ header{
 
 #boxes .row2{
     text-align: center;
+    font-size: 15px;
+    line-height: 2;
+    
 }
 #boxes .text3{
     
@@ -151,38 +151,60 @@ border-radius: 10px;
   /** (probar tambien el valor "nowrap" en vez de "wrap" */
   flex-wrap: wrap;
 
-  /** Distribucion de elementos en el eje X (probar tambien con "center", "space-around", "space-between" */
+
   justify-content: space-evenly;
 
-  /** Coloco un ancho y dejo centrada esta caja padre */
+  
   width: 80%;
   margin: 0 auto;
 
-  /** Coloco un margin-top, un padding y un borde a esta caja padre */
+
   margin-top: 50px;
   padding: 10px;
  
 }
 
 
+#contenedor3 .seccion {
+
+  flex-basis: 80%;
+  padding: 10px;
+  text-align: center;
+}
+
+#contenedor3 .seccion1 {
+  color: rgb(33, 111, 177);
+
+}
+
+#contenedor3 .seccion2 {
+  font-size: small;
+  color: rgb(138, 144, 149);
+  margin-top: 2%;
+  margin-bottom: 1%;
+
+}
+
+
+
 #contenedor4 {
-  /** Indico que esta caja padre va a funcionar con las caracteristicas de flexbox (para manipular los primeros hijos) */
+
   display: flex;
 
-  /** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
+
   flex-direction: row;
   flex-flow: wrap;
 
 
-  /** Distribucion de elementos en el eje X (probar tambien con "center", "space-around", "space-between" */
+
   justify-content: space-around;
 
-  /** Coloco un ancho y dejo centrada esta caja padre */
+
   width: 90%;
   margin: 0 auto;
   height: auto;
 
-  /** Coloco un margin-top, un padding y un borde a esta caja padre */
+ 
   margin-top: 20px;
  
  
@@ -190,36 +212,45 @@ border-radius: 10px;
 
 #contenedor4 .secciones {
   background-color: rgb(33, 111, 177);
-  color: #fff;
   border-radius: 15px;
   box-sizing: border-box;
-  font-size: 10px;
-  font-style: normal;
   text-align: center;
   width: 25%;
   height: 200px;
 }
-#contenedor4 .h11, .h22{
+#contenedor4 .h11{
 
-  margin-top: 5%;
+  margin-top: 10%;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: rgb(232, 238, 243);;
+  height: 25%;
 }
+#contenedor4  .h22{
+
+  margin-top: 1%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: rgb(232, 238, 243);;
+  height: 30%;
+}
+
+
+
 
 #contenedor4 .btn1{
   border: 1px solid #343434;
   margin-bottom: 5%;
-  margin-top: 5%;
   width: 90px;
-  height: 20px;
+  height: 22px;
   background-color: #fff;
-  size: 15%;
-
-  border-radius: 5px;
+  border-radius: 10px;
+  align-items: center;
 }
 
 
 #contenedor5 {
-  /** Indico que esta caja padre va a funcionar con las caracteristicas de flexbox (para manipular los primeros hijos) */
+  
   display: flex;
 
   /** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
@@ -228,18 +259,36 @@ border-radius: 10px;
 
 
   /** Distribucion de elementos en el eje X (probar tambien con "center", "space-around", "space-between" */
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   /** Coloco un ancho y dejo centrada esta caja padre */
   width: 100%;
   margin: 0 auto;
-  height: 100px;
+  height: 150px;
   background-color: rgb(44, 153, 163);
 
   /** Coloco un margin-top, un padding y un borde a esta caja padre */
   margin-top: 20px;
  
  
+}
+
+
+#contenedor5 .seccion {
+  flex-basis: 100%;
+
+
+
+}
+
+#contenedor5 .seccion1{
+
+  margin-top: 40px;
+  color:#fff;
+  text-align: center;
+  height: 60%;
+  width: 60%;
+
 }
 
 #bloqueenblanco{
@@ -256,7 +305,7 @@ border-radius: 10px;
   display: flex;
 
   /** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
-  flex-direction: row;
+  flex-direction:column;
 
   /** Establezco que, cuando ya no entren mas cajas en la primer fila, se vayan colocando en la fila siguiente (es decir, en una nueva fila) y asi no se salen del contenedor padre
   /** (probar tambien el valor "nowrap" en vez de "wrap" */
@@ -272,7 +321,7 @@ border-radius: 10px;
   /** Coloco un margin-top, un padding y un borde a esta caja padre */
   margin-top: 50px;
   padding: 10px;
-  border: 3px solid purple;
+
   height: 100px;
 }
 
