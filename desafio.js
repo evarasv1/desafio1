@@ -296,7 +296,34 @@ function obtenerPaisesConTelefono(econtact = {}) {
  *? Ayuda: usar ciclo while y recordar el método "push" para ir agregando valores al arreglo
  */
 
-function cargarArreglo(numero) {}
+function cargarArreglo(numero) {
+
+
+        let doblenum = 2*numero;
+        let array1 =[];
+      if (numero >0) 
+      
+      {
+        while ( numero <= doblenum) {
+      
+            array1.push(numero);
+            ++numero;
+          
+        }
+      
+          return array1;
+      
+      
+        
+      }else{
+      
+        return `El numero ingresado debe ser mayor a 0`;
+      }
+}
+
+
+//const funci18 = cargarArreglo(-20);
+//console.log(funci18);
 
 
 
