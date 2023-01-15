@@ -141,14 +141,12 @@ border-radius: 10px;
 
 
 #contenedor3 {
-  /** Indico que esta caja padre va a funcionar con las caracteristicas de flexbox (para manipular los primeros hijos) */
+
   display: flex;
 
-  /** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
+
   flex-direction: column;
 
-  /** Establezco que, cuando ya no entren mas cajas en la primer fila, se vayan colocando en la fila siguiente (es decir, en una nueva fila) y asi no se salen del contenedor padre
-  /** (probar tambien el valor "nowrap" en vez de "wrap" */
   flex-wrap: wrap;
 
 
@@ -239,35 +237,30 @@ border-radius: 10px;
 
 
 #contenedor4 .btn1{
-  border: 1px solid #343434;
+  border: 1px solid #dcdcdc;
   margin-bottom: 5%;
   width: 90px;
   height: 22px;
   background-color: #fff;
   border-radius: 10px;
   align-items: center;
+  color: rgb(33, 111, 177);;
 }
 
 
 #contenedor5 {
   
   display: flex;
-
-  /** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
   flex-direction: column;
+  justify-content: space-between;
   flex-flow: wrap;
 
-
-  /** Distribucion de elementos en el eje X (probar tambien con "center", "space-around", "space-between" */
-  justify-content: space-between;
-
-  /** Coloco un ancho y dejo centrada esta caja padre */
   width: 100%;
   margin: 0 auto;
-  height: 150px;
+  height: 180px;
   background-color: rgb(44, 153, 163);
 
-  /** Coloco un margin-top, un padding y un borde a esta caja padre */
+
   margin-top: 20px;
  
  
@@ -276,6 +269,8 @@ border-radius: 10px;
 
 #contenedor5 .seccion {
   flex-basis: 100%;
+  box-sizing: border-box;
+  text-align: center;
 
 
 
@@ -286,44 +281,121 @@ border-radius: 10px;
   margin-top: 40px;
   color:#fff;
   text-align: center;
-  height: 60%;
+  height: 50%;
   width: 60%;
 
+
 }
+
+#contenedor5 .seccion2{
+
+  margin-bottom: 5px;
+  color:#fff;
+  text-align: center;
+  height: 30%;
+  width: 40%;
+
+
+}
+
+#contenedor5 .btn2{
+  border: 1px solid #cdcbcb;
+  margin-bottom: 5%;
+  width: 90px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 10px;
+  align-items: center;
+  color: rgb(33, 111, 177);;
+}
+
 
 #bloqueenblanco{
 
   background-color: #fff;
   width: 100%;
-  height: 30px;
+  height: 80px;
 }
 
 
 
 #contenedor6 {
-  /** Indico que esta caja padre va a funcionar con las caracteristicas de flexbox (para manipular los primeros hijos) */
+
   display: flex;
 
-  /** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
-  flex-direction:column;
+  flex-direction:row;
 
-  /** Establezco que, cuando ya no entren mas cajas en la primer fila, se vayan colocando en la fila siguiente (es decir, en una nueva fila) y asi no se salen del contenedor padre
-  /** (probar tambien el valor "nowrap" en vez de "wrap" */
-  flex-wrap: wrap;
+  justify-content: center;
 
-  /** Distribucion de elementos en el eje X (probar tambien con "center", "space-around", "space-between" */
-  justify-content: space-evenly;
-
-  /** Coloco un ancho y dejo centrada esta caja padre */
   width: 100%;
-  margin: 0 auto;
+  background-color: rgb(33, 111, 177);
+  height: 200px;
 
-  /** Coloco un margin-top, un padding y un borde a esta caja padre */
-  margin-top: 50px;
-  padding: 10px;
 
-  height: 100px;
 }
+
+#contenedor6 .seccion1{
+
+  width: 30%;
+  position:relative;
+  top:0em;
+  left:0em;
+  width:30em;
+  height:100%;
+  border-radius: 120px 0px 220px 0px;
+  background-color:rgb(44, 153, 163);
+
+
+
+}
+
+#contenedor6 .seccion2{
+  
+
+  border-top-left-radius: 100px;
+  background-color: rgb(33, 111, 177);
+  width: 50%;
+  text-align: center;
+  color: #fff;
+
+ 
+}
+#contenedor6 .conta{
+  margin-top: 40px;
+}
+#contenedor6 .lista{
+  list-style: none;
+  color: #fff;
+  margin-top: 20px;
+}
+
+
+
+#contenedor6 .seccion3{
+  background-color: rgb(33, 111, 177);
+  width: 20%;
+ 
+}
+#contenedor6 .imageE{
+  width: auto;
+  height: auto;
+  max-width: 120px;
+  max-height: 80px;
+  margin-top: 15%;
+  margin-left: 40%;
+
+}
+
+#contenedor6 .image{
+  max-width: 30px;
+  max-height: 30px;
+  margin-top: 20%;
+
+
+ 
+}
+
+
 
 
 /*RESPONSIVE*/
