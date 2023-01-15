@@ -6,7 +6,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/*headr*/
+
 header{
     height: 100px;
     background: rgb(33, 111, 177);
@@ -36,7 +36,7 @@ header{
 #container1 .seccion{
     
 
-    /** Coloco un borde, padding y centro el texto de cada caja */
+   
     padding: 10px;
     text-align: center;
 
